@@ -1,0 +1,11 @@
+<h1>Rick and Morty characters</h1>
+
+<div class="row">
+    @for(char of characterList(); track char.id) {
+    <div class="col-md-3 mb-4">
+        <!-- STEP9: paso el personaje como input y escucho el output characterClicked -->
+        <app-character-item-component [character]="char"
+            (characterClicked)="openCharacterModal($event)"></app-character-item-component>
+    </div>
+    }
+</div>

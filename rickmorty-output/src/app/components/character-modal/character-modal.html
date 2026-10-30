@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ characterDetail?.name }}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <img [src]="characterDetail?.image" class="card-img-top mb-3" [alt]="characterDetail?.name">
+    <p>Status: {{ characterDetail?.status }}</p>
+    <p>Species: {{ characterDetail?.species }}</p>
+    <p>Gender: {{ characterDetail?.gender }}</p>
+    <p>Origin: {{ characterDetail?.origin?.name }}</p>
+    <p>Location: {{ characterDetail?.location?.name }}</p>
+    <p>Episodes: {{ characterDetail?.episode?.length }}</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="activeModal.close()">Close</button>
+</div>
